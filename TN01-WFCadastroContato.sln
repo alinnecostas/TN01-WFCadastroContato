@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TN01-WFCadastroContato", "TN01-WFCadastroContato\TN01-WFCadastroContato.csproj", "{9549D353-865E-4272-8C5C-D98BA127309B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9549D353-865E-4272-8C5C-D98BA127309B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9549D353-865E-4272-8C5C-D98BA127309B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9549D353-865E-4272-8C5C-D98BA127309B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9549D353-865E-4272-8C5C-D98BA127309B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCB5A475-C60F-44FA-915F-19692067675A}
+	EndGlobalSection
+EndGlobal
