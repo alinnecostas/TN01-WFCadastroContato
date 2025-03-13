@@ -53,7 +53,7 @@
             mnsCadastrar.Name = "mnsCadastrar";
             mnsCadastrar.Size = new Size(69, 20);
             mnsCadastrar.Text = "Cadastrar";
-            mnsCadastrar.Click += this.mnsCadastrarBotao;
+            mnsCadastrar.Click += mnsCadastrarBotao;
             // 
             // btnSobre
             // 
@@ -66,6 +66,7 @@
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(38, 20);
             btnSair.Text = "Sair";
+            btnSair.Click += btnSair_Click;
             // 
             // menuStrip2
             // 
@@ -78,10 +79,11 @@
             // pictureBox1
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 51);
+            pictureBox1.Location = new Point(0, 48);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 411);
+            pictureBox1.Size = new Size(589, 399);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;

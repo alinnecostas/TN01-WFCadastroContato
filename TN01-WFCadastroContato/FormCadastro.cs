@@ -91,9 +91,16 @@ namespace TN01_WFCadastroContato
 
 
           
+            string tipoTelefone = rdbComercial.Text.Substring(0, 1) + ") ";
+            tipoTelefone += rdbComercial.Text.Substring(2, 5) + "-" +
+                rdbComercial.Text.Substring(7);
 
 
-            MessageBox.Show("Nome: " + nome + "\nSobrenome: " + sobrenome + "\nTelefone: " + telefone + "\nEmail: " + email + 
+
+
+
+            MessageBox.Show("Nome: " + nome + "\nSobrenome: " + sobrenome + 
+                "\nTelefone: " + telefone + "\nEmail: " + email + 
                 "\nTipo de telefone: " + rdbComercial.Text);
             MessageBox.Show("Pessoa cadastrada com sucesso!", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);

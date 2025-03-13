@@ -37,7 +37,7 @@
             mkdTelefone = new MaskedTextBox();
             lblTelefone = new Label();
             label1 = new Label();
-            gbxSexo = new GroupBox();
+            gbxTelefone = new GroupBox();
             rdbRecado = new RadioButton();
             rdbPessoal = new RadioButton();
             rdbComercial = new RadioButton();
@@ -45,7 +45,7 @@
             lblEmail = new Label();
             btnSalvar = new Button();
             btnVoltar = new Button();
-            gbxSexo.SuspendLayout();
+            gbxTelefone.SuspendLayout();
             SuspendLayout();
             // 
             // lblNome
@@ -116,17 +116,17 @@
             label1.TabIndex = 7;
             label1.Text = "label1";
             // 
-            // gbxSexo
+            // gbxTelefone
             // 
-            gbxSexo.Controls.Add(rdbRecado);
-            gbxSexo.Controls.Add(rdbPessoal);
-            gbxSexo.Controls.Add(rdbComercial);
-            gbxSexo.Location = new Point(208, 122);
-            gbxSexo.Name = "gbxSexo";
-            gbxSexo.Size = new Size(288, 60);
-            gbxSexo.TabIndex = 8;
-            gbxSexo.TabStop = false;
-            gbxSexo.Text = "Tipo de Telefone";
+            gbxTelefone.Controls.Add(rdbRecado);
+            gbxTelefone.Controls.Add(rdbPessoal);
+            gbxTelefone.Controls.Add(rdbComercial);
+            gbxTelefone.Location = new Point(208, 122);
+            gbxTelefone.Name = "gbxTelefone";
+            gbxTelefone.Size = new Size(288, 60);
+            gbxTelefone.TabIndex = 8;
+            gbxTelefone.TabStop = false;
+            gbxTelefone.Text = "Tipo de Telefone";
             // 
             // rdbRecado
             // 
@@ -209,7 +209,7 @@
             Controls.Add(btnSalvar);
             Controls.Add(txtEmail);
             Controls.Add(lblEmail);
-            Controls.Add(gbxSexo);
+            Controls.Add(gbxTelefone);
             Controls.Add(label1);
             Controls.Add(mkdTelefone);
             Controls.Add(lblTelefone);
@@ -220,8 +220,8 @@
             Controls.Add(lblNome);
             Name = "FormCadastro";
             Text = "FormCadastro";
-            gbxSexo.ResumeLayout(false);
-            gbxSexo.PerformLayout();
+            gbxTelefone.ResumeLayout(false);
+            gbxTelefone.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -236,7 +236,7 @@
         private MaskedTextBox mkdTelefone;
         private Label lblTelefone;
         private Label label1;
-        private GroupBox gbxSexo;
+        private GroupBox gbxTelefone;
         private RadioButton rdbRecado;
         private RadioButton rdbPessoal;
         private RadioButton rdbComercial;
