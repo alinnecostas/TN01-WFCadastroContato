@@ -34,7 +34,7 @@
             txtSobrenome = new TextBox();
             label2 = new Label();
             lblLinha = new Label();
-            mkdTelefone = new MaskedTextBox();
+            mtbDddTelefone = new MaskedTextBox();
             lblTelefone = new Label();
             label1 = new Label();
             gbxTelefone = new GroupBox();
@@ -89,14 +89,15 @@
             lblLinha.TabIndex = 4;
             lblLinha.Text = "label1";
             // 
-            // mkdTelefone
+            // mtbDddTelefone
             // 
-            mkdTelefone.Location = new Point(43, 142);
-            mkdTelefone.Mask = "(00) 90000-0000";
-            mkdTelefone.Name = "mkdTelefone";
-            mkdTelefone.Size = new Size(96, 23);
-            mkdTelefone.TabIndex = 5;
-            mkdTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            mtbDddTelefone.CutCopyMaskFormat = MaskFormat.IncludePromptAndLiterals;
+            mtbDddTelefone.Location = new Point(43, 142);
+            mtbDddTelefone.Mask = "(00) 90000-0000";
+            mtbDddTelefone.Name = "mtbDddTelefone";
+            mtbDddTelefone.Size = new Size(96, 23);
+            mtbDddTelefone.TabIndex = 5;
+            mtbDddTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             // 
             // lblTelefone
             // 
@@ -211,7 +212,7 @@
             Controls.Add(lblEmail);
             Controls.Add(gbxTelefone);
             Controls.Add(label1);
-            Controls.Add(mkdTelefone);
+            Controls.Add(mtbDddTelefone);
             Controls.Add(lblTelefone);
             Controls.Add(lblLinha);
             Controls.Add(txtSobrenome);
@@ -233,7 +234,7 @@
         private TextBox txtSobrenome;
         private Label label2;
         private Label lblLinha;
-        private MaskedTextBox mkdTelefone;
+        private MaskedTextBox mtbDddTelefone;
         private Label lblTelefone;
         private Label label1;
         private GroupBox gbxTelefone;

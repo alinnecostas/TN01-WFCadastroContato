@@ -21,7 +21,7 @@ namespace TN01_WFCadastroContato
         {
             txtNome.Clear();
             txtSobrenome.Clear();
-            mkdTelefone.Clear();
+            mtbDddTelefone.Clear();
             txtEmail.Clear();
             rdbComercial.Checked = false;
             rdbPessoal.Checked = false;
@@ -31,7 +31,13 @@ namespace TN01_WFCadastroContato
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-           string nome = txtNome.Text;
+            string semMaskTelefone = mtbDddTelefone.Text
+                .Replace("(", "")
+                .Replace(")", "")
+                .Replace(" ", "")
+                .Replace("-", "");
+
+            string nome = txtNome.Text;
 
             if (nome.Length == 0) {
                 MessageBox.Show("O campo nome é obrigatório!");
@@ -50,7 +56,7 @@ namespace TN01_WFCadastroContato
 
 
 
-            string telefone = mkdTelefone.Text;
+            string telefone = mtbDddTelefone.Text;
 
             if (telefone.Length == 0)
             {
@@ -70,18 +76,18 @@ namespace TN01_WFCadastroContato
 
 
 
-
+            ETipoTelefone tipoTelefone;
             if (rdbComercial.Checked)
             {
-                rdbComercial.Text = "Comercial";
+               tipoTelefone = ETipoTelefone.Comercial;
             }
             else if (rdbPessoal.Checked)
             {
-                rdbPessoal.Text = "Pessoal";
+                tipoTelefone = ETipoTelefone.Pessoal;
             }
             else if (rdbRecado.Checked)
             {
-                rdbRecado.Text = "Recado";
+                tipoTelefone = ETipoTelefone.Recado;
             }
             else
             {
@@ -91,18 +97,26 @@ namespace TN01_WFCadastroContato
 
 
           
-            string tipoTelefone = rdbComercial.Text.Substring(0, 1) + ") ";
-            tipoTelefone += rdbComercial.Text.Substring(2, 5) + "-" +
-                rdbComercial.Text.Substring(7);
 
+            Contato c1 = new Contato();
+            c1.Nome = txtNome.Text;
+            c1.Sobrenome = txtSobrenome.Text;
+            c1.Telefone = mtbDddTelefone.Text;
+            c1.Email = txtEmail.Text;
+            c1.Codigo = 0;
+            c1.TipoTelefone = tipoTelefone;
+            
+            c1.DDD = mtbDddTelefone.Text.Substring(0, 2);
+            c1.Telefone = mtbDddTelefone.Text.Substring(3);
 
-
-
+            Contato.ListaContatos.Add(c1);
+            
+       
 
             MessageBox.Show("Nome: " + nome + "\nSobrenome: " + sobrenome + 
                 "\nTelefone: " + telefone + "\nEmail: " + email + 
                 "\nTipo de telefone: " + rdbComercial.Text);
-            MessageBox.Show("Pessoa cadastrada com sucesso!", "Info",
+            DialogResult dialogResult = MessageBox.Show("Pessoa cadastrada com sucesso!", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             LimparFormulario();
