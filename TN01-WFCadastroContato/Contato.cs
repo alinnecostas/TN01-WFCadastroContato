@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TN01_WFCadastroContato
-
 {
-
     public enum ETipoTelefone
     {
         Pessoal = 1,
@@ -15,15 +13,17 @@ namespace TN01_WFCadastroContato
         Recado
     }
 
-    internal class Contato
+    public class Contato
     {
-        public Contato(int codigo, string nome, string sobrenome, string dDD, 
-            string telefone, ETipoTelefone tipoTelefone, string email)
+        public Contato(int codigo, string? nome,
+            string? sobrenome, string? ddd,
+            string? telefone,
+            ETipoTelefone tipoTelefone, string? email)
         {
             Codigo = codigo;
             Nome = nome;
             Sobrenome = sobrenome;
-            DDD = dDD;
+            Ddd = ddd;
             Telefone = telefone;
             TipoTelefone = tipoTelefone;
             Email = email;
@@ -31,22 +31,16 @@ namespace TN01_WFCadastroContato
 
         public Contato() { }
 
-        public static List<Contato> ListaContatos 
-            = new List<Contato>();
-
+        public static List<Contato> ListaContatos =
+            new List<Contato>();
 
         public int Codigo { get; set; }
-
-        public string Nome { get; set; }
-
-        public string Sobrenome { get; set; }
-
-        public string DDD { get; set; }
-
-        public string Telefone { get; set; }
-
+        public string? Nome { get; set; }
+        public string? Sobrenome { get; set; }
+        public string? Ddd { get; set; }
+        public string? Telefone { get; set; }
         public ETipoTelefone TipoTelefone { get; set; }
+        public string? Email { get; set; }
 
-        public string Email { get; set; }
     }
 }

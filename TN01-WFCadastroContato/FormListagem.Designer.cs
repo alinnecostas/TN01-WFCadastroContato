@@ -35,20 +35,23 @@
             // dgvListaContatos
             // 
             dgvListaContatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvListaContatos.Dock = DockStyle.Fill;
-            dgvListaContatos.Location = new Point(0, 0);
+            dgvListaContatos.Location = new Point(8, 18);
             dgvListaContatos.Name = "dgvListaContatos";
-            dgvListaContatos.Size = new Size(389, 256);
+            dgvListaContatos.Size = new Size(592, 214);
             dgvListaContatos.TabIndex = 0;
             // 
             // FormListagem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(389, 256);
+            ClientSize = new Size(608, 239);
             Controls.Add(dgvListaContatos);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormListagem";
-            Text = "FormListagem";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Listagem de Contatos";
             Load += FormListagem_Load;
             ((System.ComponentModel.ISupportInitialize)dgvListaContatos).EndInit();
             ResumeLayout(false);
