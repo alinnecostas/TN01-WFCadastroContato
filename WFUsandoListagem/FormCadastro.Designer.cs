@@ -92,6 +92,7 @@
             Controls.Add(label1);
             Name = "FormCadastro";
             Text = "FormCadastro";
+            Load += FormCadastro_Load;
             ResumeLayout(false);
             PerformLayout();
         }

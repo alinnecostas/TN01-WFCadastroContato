@@ -45,6 +45,7 @@ namespace WFUsandoListagem
             us1.Senha = txtSenha.Text;
             us1.ConfirmarSenha = txtConfirmarSenha.Text;
             us1.DataCadastro = DateTime.Now;
+          
 
             if (us1.Senha != us1.ConfirmarSenha)
             {
@@ -61,6 +62,11 @@ namespace WFUsandoListagem
 
             FormListagem form = new FormListagem();
             form.ShowDialog();
+        }
+
+        private void FormCadastro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
